@@ -27,13 +27,16 @@ export default function Signup() {
     // console.log(latlong)
     let [lat, long] = latlong;
     // console.log(lat, long);
-    const response = await fetch("http://localhost:5000/api/auth/getlocation", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ latlong: { lat, long } }),
-    });
+    const response = await fetch(
+      "https://feel-foody-backend.vercel.app/api/auth/getlocation",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ latlong: { lat, long } }),
+      }
+    );
     const { location } = await response.json();
     // console.log(location);
     setAddress(location);
