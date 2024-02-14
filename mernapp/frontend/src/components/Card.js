@@ -38,8 +38,8 @@ export default function Card(props) {
         break;
       }
     }
-    console.log(food);
-    console.log(new Date());
+    // console.log(food);
+    // console.log(new Date());
     if (food !== []) {
       if (food.size === size) {
         await dispatch({
@@ -59,7 +59,7 @@ export default function Card(props) {
           size: size,
           img: props.ImgSrc,
         });
-        console.log("Size different so simply ADD one more to the list");
+        // console.log("Size different so simply ADD one more to the list");
         return;
       }
       return;

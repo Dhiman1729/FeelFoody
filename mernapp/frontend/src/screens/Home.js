@@ -142,7 +142,7 @@ export default function Home() {
                             key={filterItems.id}
                             className="col-12 col-md-6 col-lg-3"
                           >
-                            {console.log(filterItems.url)}
+                            {/* {console.log(filterItems.url)} */}
                             <Card
                               foodName={filterItems.name}
                               item={filterItems}
