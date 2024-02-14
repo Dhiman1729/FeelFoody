@@ -7,7 +7,7 @@ const bcrypt = require("bcryptjs");
 var jwt = require("jsonwebtoken");
 const axios = require("axios");
 const fetch = require("../middleware/fetchdetails");
-const jwtSecret = "HaHa";
+const jwtSecret = process.env.JWT_SECRET;
 //Creating a user and storing data to MongoDB Atlas, No Login Requiered
 router.post(
   "/createuser",
